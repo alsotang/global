@@ -7,57 +7,64 @@
   <meta name="description" content="Global : Global Demo Labs" />
 
   <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-  
+
   <script src="http://a.tbcdn.cn/app/tms/others/global/jquery-1.9.0.min.js"></script>
   <link href="plugin/google-code-prettify/prettify.css" rel="stylesheet" type="text/css" media="all">
   <script type="text/javascript" src="plugin/google-code-prettify/prettify.js"></script>
   <title>外包合作規範</title>
-  <base target="_blank">
-</head>
+  <base target="_blank"></head>
 
 <body>
 
   <!-- HEADER -->
   <div id="header_wrap" class="outer">
     <header class="inner">
-      <a id="forkme_banner" href="https://github.com/besteric/global">View on GitHub</a>
+      <a id="forkme_banner" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E9%BB%91%E4%B8%89&siteid=cntaobao&status=1&charset=utf-8">联系黑三</a>
 
       <h1 id="project_title">海外淘寶</h1>
       <h2 id="project_tagline">-外包合作規範</h2>
 
-      <section id="downloads">
+     <!--  <section id="downloads">
         <a class="zip_download_link" href="https://github.com/besteric/global/zipball/master">Download this project as a .zip file</a>
         <a class="tar_download_link" href="https://github.com/besteric/global/tarball/master">Download this project as a tar.gz file</a>
-      </section>
+      </section> -->
     </header>
   </div>
 
   <!-- MAIN CONTENT -->
   <div id="main_content_wrap" class="outer">
     <section id="main_content" class="inner">
-      <h3>
-        <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages">
-          <span class="octicon octicon-link"></span>
-        </a>
-        淘寶開發環境
-      </h3>
+      <div class="block">
+        <h3>
+          <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages">
+            <span class="octicon octicon-link"></span>
+          </a>
+          淘寶開發環境
+        </h3>
 
-      <p>
-        淘寶大部分頁面都是搭建在內部TMS系統（Template Management System），主要是PHP環境，所以我們支持PHP和HTML兩種格式的頁面。
-      </p>
+        <p>
+          淘寶大部分頁面都是搭建在內部TMS系統（Template Management System），主要是PHP環境，所以我們支持PHP和HTML兩種格式的頁面。
+        </p>
+      </div>
+      <div class="block">
+        <h3>
+          <a name="designer-templates" class="anchor" href="#designer-templates">
+            <span class="octicon octicon-link"></span>
+          </a>
+          Javascript/CSS/Image 使用說明
+        </h3>
 
-      <h3>
-        <a name="designer-templates" class="anchor" href="#designer-templates">
-          <span class="octicon octicon-link"></span>
-        </a>
-        Javascript/CSS/Image 使用說明
-      </h3>
+        <p>
+          淘寶所有的圖片和Javascript已經CSS文件都是儲存在CDN服務器上，所以一般情況下建議JS和CSS都以&lt;script&gt;或&lt;style&gt; 標籤的形式內嵌至頁面內部圖片請上傳至
+          <a href="http://disk.taobao.com">disk.taobao.com</a>
+          用戶名爲：
+          <code>upload_taobao</code>
+          密碼：
+          <code>taobao1234</code>
+          並將頁面使用的鏈接替換爲線上鏈接。
+        </p>
 
-      <p>
-        淘寶所有的圖片和Javascript已經CSS文件都是儲存在CDN服務器上，所以一般情況下建議JS和CSS都以&lt;script&gt;或&lt;style&gt; 標籤的形式內嵌至頁面內部圖片請上傳至 <a href="http://disk.taobao.com">disk.taobao.com</a> 用戶名爲：upload_taobao 密碼：taobao1234 並將頁面使用的鏈接替換爲線上鏈接。
-      </p>
-
-<pre class="lang-html">
+        <pre class="lang-html">
   //錯誤的引用方式
   &lt;script src="js/hello.js"&gt;&lt;/script&gt;
   &lt;style href="css/world.css"&gt;&lt;/style&gt;
@@ -78,57 +85,107 @@
   &lt;/style&gt;
   &lt;a href=""&gt;&lt;img src="//gtms01.alicdn.com/tps/i1/T12qLkFepcXXXbwKP7.png"&gt;&lt;/a&gt;
 </pre>
+      </div>
 
+      <div class="block">
+        <h3>
+          <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick">
+            <span class="octicon octicon-link"></span>
+          </a>
+          如何使用淘寶官方的頁頭和頁尾
+        </h3>
 
+        <p>淘寶使用統一的頁頭和頁尾，請按照如下引用方式調用淘寶的頁頭:</p>
+        <p>淘寶公共頁頭</p>
 
-      <h3>
-        <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick">
-          <span class="octicon octicon-link"></span>
-        </a>
-        如何使用淘寶官方的頁頭和頁尾
-      </h3>
+        <pre>
+&lt;?php global $marketId, $pageId, $spmId, $pageTitle, $cssLink, $jsLink; ?&gt;
+&lt;?php include_once("/home/admin/cai/includes/config.nodb.php"); ?&gt;
+&lt;?php 
+     /*
+      * assets配置
+      */
+     $timestamp = '20131212';
+     $cssExtra = '';
+     $jsExtra = '';
+     $kissy = 'kissy';
+     $version = '1.3.0';
+?&gt;
+&lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="gbk" /&gt;
+    &lt;!-- 淘宝SPM埋点 --&gt;
+    &lt;meta name="spm-id" content="&lt;?=$spmId ?&gt;" /&gt;
+    &lt;!-- 自动读取Title --&gt;
+    &lt;title&gt;&lt;?= $pageTitle?&gt;&lt;/title&gt;
+    &lt;!-- assets引用 --&gt;
+    &lt;?php _tms_subArea('/rgn/sites/global/assets.php'); ?&gt;
+    &lt;?= $cssLink ?&gt;
+  &lt;/head&gt;
+  &lt;?php echo("<"."body".">");?&gt;
+  &lt;!-- 引用全网吊顶 --&gt;
+  &lt;?php _tms_subArea('/rgn/sites/global/site_nav.php'); ?&gt;
+  &lt;script&gt;TB.Global.init();&lt;/script&gt;
+  
+  &lt;!-- 埋点统计代码模块开始 --&gt;
+  &lt;?php _tms_module_begin('{"name":"module"}') ;?&gt;
+  &lt;!-- 其他代码 --&gt;
+      ...
 
-      <p>
-        If you prefer to not use the automatic generator, push a branch named
-        <code>gh-pages</code>
-        to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.
-      </p>
+</pre>
 
+        <p>淘寶公共頁尾</p>
+
+        <pre>
+&lt;!-- 埋点统计代码模块结束 --&gt;
+&lt;?php _tms_module_end() ;?&gt;
+
+&lt;?= $jsLink ?&gt;
+&lt;?php _tms_subArea('/rgn/sites/footer.php'); ?&gt;
+&lt;/html&gt;
+</pre>
+
+        <p>代码说明</p>
+        <ul>
+          <li>
+            淘寶的TMS環境會自動過濾<code>&lt;body&gt;</code>标签，所以只能使用PHP的语法输出<code>&lt;?php echo("<"."body".">");?&gt;</code>
+          </li>
+          <li>
+            TMS系统会自动进行标题输出，<code>&lt;title&gt;&lt;?= $pageTitle?&gt;&lt;/title&gt;</code>
+          </li>
+          <li>
+            运营同学非常关注的SPM（Super Position Model ）数据统计埋点，TMS也会自动做好这件事，只需要注意在<code>&lt;head&gt;</code>添加这么一段代码<pre>&lt;meta name="spm-id" content="&lt;?=$spmId ?&gt;" /&gt;</pre>，然后将所有需要统计的链接区块都包含在这个容器里面就可以统计到<pre>&lt;?php _tms_module_begin('{"name":"module"}') ;?&gt; ..您的代码..&lt;?php _tms_module_end() ;?&gt;</pre>。一般情况我们建议直接在<code>&lt;Body&gt;</code>标签之后就添加上述容器代码
+          </li>
+        </ul>
+      </div>
+      
+      <div class="block">
       <h3>
         <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors">
           <span class="octicon octicon-link"></span>
         </a>
-        Authors and Contributors
+        最终提交的文件范例
       </h3>
 
       <p>
-        You can
-        <a href="https://github.com/blog/821" class="user-mention">@mention</a>
-        a GitHub username to generate a link to their profile. The resulting
-        <code>&lt;a&gt;</code>
-        element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (
-        <a href="https://github.com/defunkt" class="user-mention">@defunkt</a>
-        ), PJ Hyett (
-        <a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>
-        ), and Tom Preston-Werner (
-        <a href="https://github.com/mojombo" class="user-mention">@mojombo</a>
-        ) founded GitHub.
+        <img src="http://gtms01.alicdn.com/tps/i1/T1ObobFnVcXXaosagM-556-603.jpeg" alt="">
       </p>
+      </div>
 
-      <h3>
-        <a name="support-or-contact" class="anchor" href="#support-or-contact">
-          <span class="octicon octicon-link"></span>
-        </a>
-        Support or Contact
-      </h3>
-
-      <p>
-        Having trouble with Pages? Check out the documentation at
-        <a href="http://help.github.com/pages">http://help.github.com/pages</a>
-        or contact
-        <a href="mailto:support@github.com">support@github.com</a>
-        and we’ll help you sort it out.
-      </p>
+      <div class="block">
+        <h3>
+          <a name="support-or-contact" class="anchor" href="#support-or-contact">
+            <span class="octicon octicon-link"></span>
+          </a>
+          恭喜您，完成了一份符合淘寶規範的文檔
+        </h3>
+    
+        <p>
+          ---EOF---
+        </p>
+      </div>
+      
     </section>
   </div>
 
@@ -151,8 +208,6 @@
       window.prettyPrint && prettyPrint();
     });
   </script>
-  <style>
-
-  </style>
+  <style></style>
 </body>
 </html>
