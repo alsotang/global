@@ -35,7 +35,7 @@
         margin-top: 80px;
         margin-bottom: 40px;
         width: 1000px;
-        height: 1200px;
+        height: 1250px;
         -webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
         -moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
         box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
@@ -45,7 +45,7 @@
         width: 0;
         float: left;
         background: url(http://gtms01.alicdn.com/tps/i1/T1h2QFFeplXXXA832r-6-6.png) repeat;
-        height: 1200px;
+        height: 1250px;
 
 
       }
@@ -94,7 +94,7 @@
       .content{
         width: 1000px;
         float: left;
-        height: 1200px;
+        height: 1250px;
         background: white;
       }
       .page-header{
@@ -255,7 +255,7 @@
                   <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">卖家id输入</label>
                     <div class="col-sm-10">
-                      <input type="password" class="form-control" id="" placeholder="使用','分隔seller_id">
+                      <input type="text" class="form-control" id="" placeholder="使用','分隔seller_id">
                     </div>
                   </div>
 
@@ -318,28 +318,28 @@
                   <div class="form-group">
                     <label for="" class="col-sm-2 control-label">一级类目ID</label>
                     <div class="col-sm-10">
-                      <input type="password" class="form-control" id="" placeholder="使用','分隔seller_id">
+                      <input type="text" class="form-control" id="" placeholder="使用','分隔seller_id">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label for="" class="col-sm-2 control-label">二级类目ID</label>
                     <div class="col-sm-10">
-                      <input type="password" class="form-control" id="" placeholder="使用','分隔seller_id">
+                      <input type="text" class="form-control" id="" placeholder="使用','分隔seller_id">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label for="" class="col-sm-2 control-label">三级类目ID</label>
                     <div class="col-sm-10">
-                      <input type="password" class="form-control" id="" placeholder="使用','分隔seller_id">
+                      <input type="text" class="form-control" id="" placeholder="使用','分隔seller_id">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label for="" class="col-sm-2 control-label">关键词筛选</label>
                     <div class="col-sm-10">
-                      <input type="password" class="form-control" id="" placeholder="使用','分隔seller_id">
+                      <input type="text" class="form-control" id="" placeholder="使用','分隔seller_id">
                     </div>
                   </div>
 
@@ -386,7 +386,7 @@
                     </div>
                     <div class="alg-box">
                       <div class="alg-box-hd">
-                        <label for="">分桶1</label> <input type="checkbox" /> 
+                        <label for="">分桶2</label> <input type="checkbox" /> 
                       </div>
                       <div class="alg-box-bd">
                         <label for="">算法类别：</label>
@@ -413,7 +413,7 @@
                     </div>
                     <div class="alg-box">
                       <div class="alg-box-hd">
-                        <label for="">分桶1</label> <input type="checkbox" /> 
+                        <label for="">分桶3</label> <input type="checkbox" /> 
                       </div>
                       <div class="alg-box-bd">
                         <label for="">算法类别：</label>
@@ -440,7 +440,7 @@
                     </div>
                     <div class="alg-box">
                       <div class="alg-box-hd">
-                        <label for="">分桶1</label> <input type="checkbox" /> 
+                        <label for="">分桶4</label> <input type="checkbox" /> 
                       </div>
                       <div class="alg-box-bd">
                         <label for="">算法类别：</label>
@@ -450,23 +450,63 @@
                           <option value="">千人千面</option>
                         </select>
                         <label for="">算法类型：</label>
-                        <select class="">
-                          <option value="">123</option>
-                          <option value="">121212</option>
-                          <option value="">sdfdsfdsf</option>
+                        <select class="dropLang">
+                          <option value="1">Javascript</option>   
+                          <option value="2">Java</option>   
+                          <option value="3">C#</option> 
                         </select>
                         <label for="">算法排序：</label>
-                        <select name="" id="">
-                          <option value="">算法排序标准1</option>
-                          <option value="">算法排序标准2</option>
-                          <option value="">算法排序标准3</option>
-                          <option value="">算法排序标准4</option>
+                        <select name="" class="dropFrame">
+                          <option selected="selected" value="0">Please Select</option>   
+                          <option value="1" parentid="1">JQuery</option>   
+                          <option value="2" parentid="1">Prototype</option>   
+                          <option value="3" parentid="2">Struts</option>   
+                          <option value="4" parentid="2">Spring</option>   
+                          <option value="5" parentid="2">Velocity</option>   
+                          <option value="6" parentid="2">Hibernate</option>   
+                          <option value="7" parentid="3">ASP.NET MVC</option>   
+                          <option value="8" parentid="3">Castle</option> 
                         </select>
                       </div>
                       <button type="button" class="btn btn-sm btn-success">预览</button>
                     </div>                  
                   </div>
+                  
+                  <script>
+                    (function(){
 
+                      $(function(){  
+                         $(".dropLang").unbind("change", eDropLangChange).bind("change", eDropLangChange);   
+                         $(".dropFrame").unbind("change", eDropFrameChange).bind("change", eDropFrameChange);   
+                      });
+
+
+
+                      var eDropLangChange = function(){  
+
+                        var selectedValue = $(this).val();
+
+                        var self_parent = $(this).parent();
+
+                        
+                        $(self_parent).children('.dropFrame').children("span").each(function(){  
+                          $(this).children().clone().replaceAll($(this));   
+                        });  
+                        if(parseInt(selectedValue) != 0){  
+                          $(self_parent).children('.dropFrame').children("option[parentid!='" + selectedValue + "'][value!='0']").each(function(){   
+                            $(this).wrap("<span style='display:none'></span>");  
+                          });   
+                        }  
+                      };
+
+                      var eDropFrameChange = function(){ 
+                        var self_parent = $(this).parent();
+
+                        $(self_parent).children(".dropLang").val($(this).children("option:selected").attr("parentid"));   
+                      };  
+
+                    })()
+                  </script>
 
 
 
