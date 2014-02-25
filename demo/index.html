@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>铜锣湾计划</title>
-    <link rel="stylesheet" href="index.css"/>
-    <script src="index.js"></script>
+    
     <!-- 最新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
@@ -228,47 +227,47 @@
                   <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">图片质量控制</label>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail3" placeholder="图片质量控制">
+                      <input type="email" class="form-control picscore" id="inputEmail3" placeholder="图片质量控制">
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">买家注册地</label>
+                    <label for="inputPassword3" class="col-sm-2 control-label ">买家注册地</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="" placeholder="买家注册地">
+                      <input type="text" class="form-control areabuyerreg" id="" placeholder="买家注册地">
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">买家收货地</label>
+                    <label for="inputPassword3" class="col-sm-2 control-label ">买家收货地</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="" placeholder="买家收货地">
+                      <input type="text" class="form-control areabuyerlgreceive" id="" placeholder="买家收货地">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">订单所在地</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="" placeholder="订单所在地">
+                      <input type="text" class="form-control areaorderoccur" id="" placeholder="订单所在地">
                     </div>
                   </div>                  
                   <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">卖家id输入</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="" placeholder="使用','分隔seller_id">
+                      <input type="text" class="form-control sellerid" id="" placeholder="使用','分隔seller_id">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" value="">
+                        <input type="checkbox" value="" class="iswhiteground">
                         是否白底图片
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" value="" class="regulartradeflg">
                           排除非正常行为 (包括恶意注册,刷机点击,炒信,转账交易等)
                       </label> 
                     </div>              
@@ -318,35 +317,35 @@
                   <div class="form-group">
                     <label for="" class="col-sm-2 control-label">一级类目ID</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="" placeholder="使用','分隔seller_id">
+                      <input type="text" class="form-control categorylevel1" id="" placeholder="使用','分隔seller_id">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label for="" class="col-sm-2 control-label">二级类目ID</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="" placeholder="使用','分隔seller_id">
+                      <input type="text" class="form-control categorylevel2" id="" placeholder="使用','分隔seller_id">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label for="" class="col-sm-2 control-label">三级类目ID</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="" placeholder="使用','分隔seller_id">
+                      <input type="text" class="form-control categoryleaf" id="" placeholder="使用','分隔seller_id">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label for="" class="col-sm-2 control-label">关键词筛选</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="" placeholder="使用','分隔seller_id">
+                      <input type="text" class="form-control keyword" id="" placeholder="使用','分隔seller_id">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" value="">
+                        <input type="checkbox" value="" class="isexemptionpostage">
                         是否国内包邮
                       </label>
                     </div>            
@@ -359,113 +358,84 @@
                   <div class="form-group">
                     <div class="alg-box">
                       <div class="alg-box-hd">
-                        <label for="">分桶1</label> <input type="checkbox" /> 
+                        <label for="">分桶1</label> <input type="checkbox" class="selectedsubbarrels"/> 
                       </div>
                       <div class="alg-box-bd">
-                        <label for="">算法类别：</label>
-                        <select name="" id="" class="alg-type">
-                          <option value="">自动</option>
-                          <option value="">半自动</option>
-                          <option value="">千人千面</option>
-                        </select>
-                        <label for="">算法类型：</label>
-                        <select class="">
-                          <option value="">123</option>
-                          <option value="">121212</option>
-                          <option value="">sdfdsfdsf</option>
-                        </select>
-                        <label for="">算法排序：</label>
-                        <select name="" id="">
-                          <option value="">算法排序标准1</option>
-                          <option value="">算法排序标准2</option>
-                          <option value="">算法排序标准3</option>
-                          <option value="">算法排序标准4</option>
-                        </select>
-                      </div>
-                      <button type="button" class="btn btn-sm btn-success">预览</button>
-                    </div>
-                    <div class="alg-box">
-                      <div class="alg-box-hd">
-                        <label for="">分桶2</label> <input type="checkbox" /> 
-                      </div>
-                      <div class="alg-box-bd">
-                        <label for="">算法类别：</label>
-                        <select name="" id="" class="alg-type">
-                          <option value="">自动</option>
-                          <option value="">半自动</option>
-                          <option value="">千人千面</option>
-                        </select>
-                        <label for="">算法类型：</label>
-                        <select class="">
-                          <option value="">123</option>
-                          <option value="">121212</option>
-                          <option value="">sdfdsfdsf</option>
-                        </select>
-                        <label for="">算法排序：</label>
-                        <select name="" id="">
-                          <option value="">算法排序标准1</option>
-                          <option value="">算法排序标准2</option>
-                          <option value="">算法排序标准3</option>
-                          <option value="">算法排序标准4</option>
-                        </select>
-                      </div>
-                      <button type="button" class="btn btn-sm btn-success">预览</button>
-                    </div>
-                    <div class="alg-box">
-                      <div class="alg-box-hd">
-                        <label for="">分桶3</label> <input type="checkbox" /> 
-                      </div>
-                      <div class="alg-box-bd">
-                        <label for="">算法类别：</label>
-                        <select name="" id="" class="alg-type">
-                          <option value="">自动</option>
-                          <option value="">半自动</option>
-                          <option value="">千人千面</option>
-                        </select>
-                        <label for="">算法类型：</label>
-                        <select class="">
-                          <option value="">123</option>
-                          <option value="">121212</option>
-                          <option value="">sdfdsfdsf</option>
-                        </select>
-                        <label for="">算法排序：</label>
-                        <select name="" id="">
-                          <option value="">算法排序标准1</option>
-                          <option value="">算法排序标准2</option>
-                          <option value="">算法排序标准3</option>
-                          <option value="">算法排序标准4</option>
-                        </select>
-                      </div>
-                      <button type="button" class="btn btn-sm btn-success">预览</button>
-                    </div>
-                    <div class="alg-box">
-                      <div class="alg-box-hd">
-                        <label for="">分桶4</label> <input type="checkbox" /> 
-                      </div>
-                      <div class="alg-box-bd">
-                        <label for="">算法类别：</label>
-                        <select name="" id="" class="alg-type">
-                          <option value="">自动</option>
-                          <option value="">半自动</option>
-                          <option value="">千人千面</option>
-                        </select>
+                        <p>
+                          <label for="">算法类别：</label>
+                          <select name="" id="" class="alg-type">
+                          </select>
+                        </p>
                         <label for="">算法类型：</label>
                         <select class="dropLang">
-                          <option value="1">Javascript</option>   
-                          <option value="2">Java</option>   
-                          <option value="3">C#</option> 
+                         
                         </select>
                         <label for="">算法排序：</label>
                         <select name="" class="dropFrame">
-                          <option selected="selected" value="0">Please Select</option>   
-                          <option value="1" parentid="1">JQuery</option>   
-                          <option value="2" parentid="1">Prototype</option>   
-                          <option value="3" parentid="2">Struts</option>   
-                          <option value="4" parentid="2">Spring</option>   
-                          <option value="5" parentid="2">Velocity</option>   
-                          <option value="6" parentid="2">Hibernate</option>   
-                          <option value="7" parentid="3">ASP.NET MVC</option>   
-                          <option value="8" parentid="3">Castle</option> 
+                     
+                        </select>
+                      </div>
+                      <button type="button" class="btn btn-sm btn-success">预览</button>
+                    </div>
+                    <div class="alg-box">
+                      <div class="alg-box-hd">
+                        <label for="">分桶2</label> <input type="checkbox" class="selectedsubbarrels"/> 
+                      </div>
+                      <div class="alg-box-bd">
+                        <p>
+                          <label for="">算法类别：</label>
+                          <select name="" id="" class="alg-type">
+                          </select>
+                        </p>
+                        <label for="">算法类型：</label>
+                        <select class="dropLang">
+                        
+                        </select>
+                        <label for="">算法排序：</label>
+                        <select name="" class="dropFrame">
+              
+                        </select>
+                      </div>
+                      <button type="button" class="btn btn-sm btn-success">预览</button>
+                    </div>
+                    <div class="alg-box">
+                      <div class="alg-box-hd">
+                        <label for="">分桶3</label> <input type="checkbox" class="selectedsubbarrels" /> 
+                      </div>
+                      <div class="alg-box-bd">
+                        <p>
+                          <label for="">算法类别：</label>
+                          <select name="" id="" class="alg-type">
+                          </select>
+                        </p>
+                        
+                        <label for="">算法类型：</label>
+                        <select class="dropLang">
+                      
+                        </select>
+                        <label for="">算法排序：</label>
+                        <select name="" class="dropFrame">
+                   
+                        </select>
+                      </div>
+                      <button type="button" class="btn btn-sm btn-success">预览</button>
+                    </div>
+                    <div class="alg-box">
+                      <div class="alg-box-hd">
+                        <label for="">分桶4</label> <input type="checkbox" class="selectedsubbarrels" /> 
+                      </div>
+                      <div class="alg-box-bd">
+                        <p>
+                          <label for="">算法类别：</label>
+                          <select name="" id="" class="alg-type">
+                          </select>
+                        </p>
+                        <label for="">算法类型：</label>
+                        <select class="dropLang">
+                        </select>
+                        <label for="">算法排序：</label>
+                        <select name="" class="dropFrame">
+                            
                         </select>
                       </div>
                       <button type="button" class="btn btn-sm btn-success">预览</button>
@@ -473,39 +443,157 @@
                   </div>
                   
                   <script>
-                    (function(){
 
-                      $(function(){  
-                         $(".dropLang").unbind("change", eDropLangChange).bind("change", eDropLangChange);   
-                         $(".dropFrame").unbind("change", eDropFrameChange).bind("change", eDropFrameChange);   
-                      });
+                    var app;
+
+                    app = (function(){
+
+                        var application = {
+
+                          init: function(){
+                            this.initSelect();
+                            this.initPage();
+                          },
+                          initSelect: function() {
+
+                            var eDropLangChange = function(){  
+
+                              var selectedValue = $(this).children("option:selected").attr("data-id");
+
+                              var self_parent = $(this).parent();
+
+                              
+                              $(self_parent).children('.dropFrame').children("span").each(function(){  
+                                $(this).children().clone().replaceAll($(this));   
+                              });  
+                              if(parseInt(selectedValue) != 0){  
+                                $(self_parent).children('.dropFrame').children("option[parentid!='" + selectedValue + "'][value!='0']").each(function(){   
+                                  $(this).wrap("<span style='display:none'></span>");  
+                                });   
+                              }  
+                            };
+
+                            var eDropFrameChange = function(){ 
+                              var self_parent = $(this).parent();
+                              var parentid = $(this).children("option:selected").attr("parentid");
+                              $(self_parent).children(".dropLang").find("[data-id|="+ parentid +"]").prop("selected",true);                       
+                            };
+
+                            $(".dropLang").unbind("change", eDropLangChange).bind("change", eDropLangChange);   
+                            $(".dropFrame").unbind("change", eDropFrameChange).bind("change", eDropFrameChange); 
 
 
+                          },
+                          initPage: function() {
+                            $.ajax({
+                              type : "get",
+                              url : "http://10.125.203.32:8080/tboverseas/item/queryList.htm?moduleId=201424",
+                              dataType : "jsonp",
+                              success: function(data){
 
-                      var eDropLangChange = function(){  
+                                if(data.operationStatus==1) return;
+                                
 
-                        var selectedValue = $(this).val();
+                                var filterConditions = data.filterConditions;
+                                var picScore = filterConditions.picScore; //图片分值
+                                var areaBuyerReg = filterConditions.areaBuyerReg; //买家注册地
+                                var areaBuyerLgReceive = filterConditions.areaBuyerLgReceive; //买家收货地址
+                                var areaOrderOccur = filterConditions.areaOrderOccur; //订单所在地
+                                var sellerId = filterConditions.sellerId; //卖家ID
+                                var isWhiteGround = filterConditions.isWhiteGround; //是否白底
+                                var regularTradeFlg = filterConditions.regularTradeFlg; //是否正常交易
+                                var categoryLevel1 = filterConditions.categoryLevel1;
+                                var categoryLevel2 = filterConditions.categoryLevel2;
+                                var categoryLeaf = filterConditions.categoryLeaf;
+                                var keyword = filterConditions.keyword;
+                                var isExemptionPostage = filterConditions.isExemptionPostage; //是否包邮
 
-                        var self_parent = $(this).parent();
+                                $('.picscore').val(picScore);
+                                $('.areabuyerreg').val(areaBuyerReg);
+                                $('.areabuyerLgreceive').val(areaBuyerLgReceive);
+                                $('.areaorderoccur').val(areaOrderOccur);
+                                $('.sellerid').val(sellerId);
+                                $('.iswhiteground').checked=isWhiteGround;
+                                $('.regulartradeflg').checked=regularTradeFlg;
+                                $('.categorylevel1').val(categoryLevel1);
+                                $('.categorylevel2').val(categoryLevel2);
+                                $('.categoryleaf').val(categoryLeaf);
+                                $('.keyword').val(keyword);
+                                $('.isexemptionpostage').checked=isExemptionPostage;
 
-                        
-                        $(self_parent).children('.dropFrame').children("span").each(function(){  
-                          $(this).children().clone().replaceAll($(this));   
-                        });  
-                        if(parseInt(selectedValue) != 0){  
-                          $(self_parent).children('.dropFrame').children("option[parentid!='" + selectedValue + "'][value!='0']").each(function(){   
-                            $(this).wrap("<span style='display:none'></span>");  
-                          });   
-                        }  
-                      };
+  
 
-                      var eDropFrameChange = function(){ 
-                        var self_parent = $(this).parent();
+                                var subBarrelsMap = data.filterConditions.subBarrelsMap;
+                                var subBarrels_1 = subBarrelsMap.subBarrels_1;
+                                var subBarrels_2 = subBarrelsMap.subBarrels_2;
+                                var subBarrels_3 = subBarrelsMap.subBarrels_3;
+                                var subBarrels_4 = subBarrelsMap.subBarrels_4;
 
-                        $(self_parent).children(".dropLang").val($(this).children("option:selected").attr("parentid"));   
-                      };  
+                                var subBarrelsList = [subBarrels_1,subBarrels_2,subBarrels_3,subBarrels_4];
 
-                    })()
+                                
+                                $('.alg-box').each(function(index){
+
+                                  self = $(this);
+
+                                  
+                                  var subBarrels = subBarrelsList[index];
+
+                                  var selectedSubBarrels = subBarrels.selectedSubBarrels;
+
+                                  //debugger;
+                                  self.find('.selectedsubbarrels')[0].checked = selectedSubBarrels;
+
+
+                                  //算法类别
+                                  var arithmeticTypes = subBarrels.arithmeticTypes;
+                                  $.each(arithmeticTypes,function(key,value){
+                                    self.find('.alg-type').append('<option value="'+value+'">'+value+'</option>');
+                                  });
+
+                                  //算法类型
+                                  var arithmetics = subBarrels.arithmetics;
+                                  $.each(arithmetics,function(key,value){
+
+                                    dataId = value.substring(0,1);
+
+                                    value = value.slice(2,value.length);
+
+                                    self.find('.dropLang').append('<option value="'+value+'" data-id="'+ dataId +'">'+value+'</option>');
+                                  });
+
+                                  //算法排序
+                                  var orderString = subBarrels.orderString;
+                                  $.each(orderString,function(key,value){
+
+                                    parentId = value.substring(0,1);
+
+                                    value = value.slice(2,value.length);
+
+                                    self.find('.dropFrame').append('<option value="'+value+'" parentid="'+ parentId +'">'+value+'</option>');
+                                  });
+
+                                });
+
+                                
+
+
+                                  
+                              }
+                            });
+                          }
+                        }
+
+                      return application;
+
+                    })();
+
+                    app.init();
+
+                    
+
+                   
+                    
                   </script>
 
 
