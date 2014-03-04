@@ -375,7 +375,7 @@
                      
                         </select>
                       </div>
-                      <button type="button" class="btn btn-sm btn-success">预览</button>
+                      <button type="button" class="btn btn-sm btn-success btn-preview">预览</button>
                     </div>
                     <div class="alg-box">
                       <div class="alg-box-hd">
@@ -396,7 +396,7 @@
               
                         </select>
                       </div>
-                      <button type="button" class="btn btn-sm btn-success">预览</button>
+                      <button type="button" class="btn btn-sm btn-success btn-preview">预览</button>
                     </div>
                     <div class="alg-box">
                       <div class="alg-box-hd">
@@ -418,7 +418,7 @@
                    
                         </select>
                       </div>
-                      <button type="button" class="btn btn-sm btn-success">预览</button>
+                      <button type="button" class="btn btn-sm btn-success btn-preview">预览</button>
                     </div>
                     <div class="alg-box">
                       <div class="alg-box-hd">
@@ -438,7 +438,7 @@
                             
                         </select>
                       </div>
-                      <button type="button" class="btn btn-sm btn-success">预览</button>
+                      <button type="button" class="btn btn-sm btn-success btn-preview">预览</button>
                     </div>                  
                   </div>
                   
@@ -453,6 +453,7 @@
                           init: function(){
                             this.initSelect();
                             this.initPage();
+                            this.bind();
                           },
                           initSelect: function() {
 
@@ -484,6 +485,7 @@
 
 
                           },
+
                           initPage: function() {
                             $.ajax({
                               type : "get",
@@ -580,6 +582,44 @@
 
                                   
                               }
+                            });
+                          },
+
+                          bind : function(){
+
+                            
+
+
+                            $('body').on('click','button',function(){
+                              
+                              var causeway = {  id: $.now() ,
+                                              picscore: $('.picscore').val(), 
+                                              areabuyerreg: $('.areabuyerreg').val(),
+                                              areabuyerLgreceive :$('.areabuyerLgreceive').val() ,
+                                              areaorderoccur :$('.areaorderoccur').val(), 
+                                              sellerid :$('.sellerid').val(),
+                                              iswhiteground : $('.iswhiteground')[0].checked,
+                                              regulartradeflg : $('.regulartradeflg')[0].checked,
+                                              categorylevel1 : $('.categorylevel1').val(),
+                                              categorylevel2 : $('.categorylevel2').val(),
+                                              categoryleaf : $('.categoryleaf').val(),
+                                              keyword : $('.keyword').val(),
+                                              isexemptionpostage : $('.isexemptionpostage')[0].checked
+                                              };
+
+
+                              
+
+                              localStorage.removeItem("causeway");
+
+                              var item_array = [];
+
+                              item_array.push(causeway);
+
+                              localStorage.setItem("causeway", JSON.stringify(item_array));
+
+                              window.open('./preview.html');
+
                             });
                           }
                         }

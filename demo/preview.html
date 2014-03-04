@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <title>铜锣湾计划</title>
-    <link rel="stylesheet" href="index.css"/>
-    <script src="index.js"></script>
     <!-- 最新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
@@ -160,7 +158,47 @@
         height: 280px;
         overflow: hidden;
         text-align: center;
+        position: relative;
+      }
+      .pre-item li.deleted{
+        background-color:black;
+        opacity: 0.5;
+      }
+      .pre-item li a{
+        width: 240px;
+        height: 280px;
+        display: block;
+      }
+      .pre-item li a:hover{
 
+      }
+      .pre-item li img{
+        display: inline-block;
+        margin: 0 auto;
+      }
+      .pre-item li span{
+        display: inline-block;
+        height: 20px;
+        width: 240px;
+      }
+      .pre-item li .mask{
+        display: none;
+        position: absolute;
+        top: 0;
+        width: 240px;
+        height: 280px;
+        background:url(http://gtms02.alicdn.com/tps/i2/T1co9SFupcXXb5Mas3-128-128.png) no-repeat 60px center;
+      }
+      .pre-item li.deleted .mask,.pre-item li:hover .mask{
+        display: block;
+      }
+      .flip-btn,.save{
+        text-align: center;
+        padding-bottom: 30px;
+      }
+      .save{
+        padding-top: 30px;
+        border-top: 1px solid #eaeaea;
       }
     </style>
   </head>
@@ -241,9 +279,66 @@
                   <div class="form-group">
                     <label for="" class="col-sm-2 control-label">卖家星级过滤</label>
                     <div class="col-sm-10">
-                      <select id="" class="form-control">
-                        <option>钻石卖家</option>
-                      </select>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 1心
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="option2"> 2心
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="option3"> 3心
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox4" value="option4"> 4心
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox5" value="option5"> 5心
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox6" value="option6"> 1钻
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox7" value="option7"> 2钻
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox8" value="option8"> 3钻
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox9" value="option9"> 4钻
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox10" value="option10"> 5钻
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox11" value="option11"> 1皇冠
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox12" value="option12"> 2皇冠
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox13" value="option13"> 3皇冠
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox14" value="option14"> 4皇冠
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox15" value="option15"> 5皇冠
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox16" value="option16"> 1金冠
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox17" value="option17"> 2金冠
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox18" value="option18"> 3金冠
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox19" value="option19"> 4金冠
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox20" value="option20"> 5金冠
+                      </label>
                     </div>
                   </div>
 
@@ -270,60 +365,17 @@
                   <h3 class="label label-info">内容预览区</h3>
 
                   <ul class="pre-item form-group">
-                    <li>
-                      <a href="">
-                        <img src="http://placehold.it/240x240" alt="">
-                        <span>我是标题</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src="http://placehold.it/240x240" alt="">
-                        <span>我是标题</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src="http://placehold.it/240x240" alt="">
-                        <span>我是标题</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src="http://placehold.it/240x240" alt="">
-                        <span>我是标题</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src="http://placehold.it/240x240" alt="">
-                        <span>我是标题</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src="http://placehold.it/240x240" alt="">
-                        <span>我是标题</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src="http://placehold.it/240x240" alt="">
-                        <span>我是标题</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src="http://placehold.it/240x240" alt="">
-                        <span>我是标题</span>
-                      </a>
-                    </li>
+
                   </ul>
 
+                  <div class="flip-btn">
+                    <button type="button" class="flip-more btn btn-sm btn-primary">查看更多</button>
+                    <span href="" class="page-now" style="display:none"></span>
+                  </div>
 
-
-
-
+                  <div class="save">
+                    <button type="button" class="btn btn-sm btn-success">保存算法</button>
+                  </div>
                 </form>
               </div>
             </div>
@@ -331,5 +383,88 @@
         </div>
       </div>
     </div>
+
+
+  <script>
+    var preview = (function(){
+
+      var application = {
+        init : function(){
+          this.LoadItemList(1);
+          this.BindClick();
+        },
+        LoadItemList : function(page){
+
+          var parameter = this.ReadLocalData()[0];
+
+          parameter['pageNum'] = page;
+
+          $.ajax({
+            type : "get",
+            url : 'http://10.125.203.32:8080/tboverseas/item/queryList.htm',
+            data : parameter,
+            dataType : "jsonp",
+            success: function(data){
+              var dataList = data.itemInfoList.dataList;
+              var pagenow = data.itemInfoList.currentPageNum;
+
+              $.each(dataList,function(key,value){
+
+                value.mainPic = value.mainPic+'_240x240.jpg';
+
+                var itemcon = '<li><a href="" data-id="'+ value.itemId +'" data-seller="'+ value.sellerId +'"><img src="'+ value.mainPic +'" alt=""><span>'+ value.title +'</span></a><span class="mask"></span></li>';
+
+
+              $('.pre-item').append(itemcon);
+
+              });
+
+              //当前页码
+              $('.page-now').html(pagenow);
+            }
+          })
+        },
+        ReadLocalData : function(){
+          var preview_data = JSON.parse(localStorage.getItem("causeway"));
+          
+          return preview_data;
+        },
+        BindClick : function(){
+          var self = this;
+
+          $( "body" ).delegate( ".mask", "click", function( event ) {
+
+            var parent = $(this).parent('li')[0];
+
+            $(parent).toggleClass('deleted');
+
+          });
+
+          $( "body" ).delegate( ".flip-more", "click", function( event ) {
+            
+            
+
+            var page = parseInt($('.page-now').html())+1;
+            
+            self.LoadItemList(page);
+            event.preventDefault();
+
+
+            
+
+            
+          });
+
+        }
+      }
+
+      return application;
+    })()
+
+    preview.init();
+
+
+
+  </script>  
   </body>
 </html>
