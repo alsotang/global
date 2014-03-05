@@ -263,14 +263,14 @@
                   <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">商品价格下限</label>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail3" placeholder="商品价格最小值">
+                      <input type="" class="form-control" id="pricemin" placeholder="商品价格最小值">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">商品价格上限</label>
                     <div class="col-sm-10">
-                      <input type="password" class="form-control" id="" placeholder="商品价格最小值">
+                      <input type="" class="form-control" id="pricemax" placeholder="商品价格最大值">
                     </div>
                   </div>
 
@@ -280,66 +280,70 @@
                     <label for="" class="col-sm-2 control-label">卖家星级过滤</label>
                     <div class="col-sm-10">
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 1心
+                        <input type="checkbox" id="inlineCheckbox1" value="1心"> 1心
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox2" value="option2"> 2心
+                        <input type="checkbox" id="inlineCheckbox2" value="2心"> 2心
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="option3"> 3心
+                        <input type="checkbox" id="inlineCheckbox3" value="3心"> 3心
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox4" value="option4"> 4心
+                        <input type="checkbox" id="inlineCheckbox4" value="4心"> 4心
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox5" value="option5"> 5心
+                        <input type="checkbox" id="inlineCheckbox5" value="5心"> 5心
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox6" value="option6"> 1钻
+                        <input type="checkbox" id="inlineCheckbox6" value="1钻"> 1钻
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox7" value="option7"> 2钻
+                        <input type="checkbox" id="inlineCheckbox7" value="2钻"> 2钻
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox8" value="option8"> 3钻
+                        <input type="checkbox" id="inlineCheckbox8" value="3钻"> 3钻
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox9" value="option9"> 4钻
+                        <input type="checkbox" id="inlineCheckbox9" value="4钻"> 4钻
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox10" value="option10"> 5钻
+                        <input type="checkbox" id="inlineCheckbox10" value="5钻"> 5钻
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox11" value="option11"> 1皇冠
+                        <input type="checkbox" id="inlineCheckbox11" value="1皇冠"> 1皇冠
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox12" value="option12"> 2皇冠
+                        <input type="checkbox" id="inlineCheckbox12" value="2皇冠"> 2皇冠
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox13" value="option13"> 3皇冠
+                        <input type="checkbox" id="inlineCheckbox13" value="3皇冠"> 3皇冠
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox14" value="option14"> 4皇冠
+                        <input type="checkbox" id="inlineCheckbox14" value="4皇冠"> 4皇冠
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox15" value="option15"> 5皇冠
+                        <input type="checkbox" id="inlineCheckbox15" value="5皇冠"> 5皇冠
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox16" value="option16"> 1金冠
+                        <input type="checkbox" id="inlineCheckbox16" value="1金冠"> 1金冠
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox17" value="option17"> 2金冠
+                        <input type="checkbox" id="inlineCheckbox17" value="2金冠"> 2金冠
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox18" value="option18"> 3金冠
+                        <input type="checkbox" id="inlineCheckbox18" value="3金冠"> 3金冠
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox19" value="option19"> 4金冠
+                        <input type="checkbox" id="inlineCheckbox19" value="4金冠"> 4金冠
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox20" value="option20"> 5金冠
+                        <input type="checkbox" id="inlineCheckbox20" value="5金冠"> 5金冠
                       </label>
                     </div>
+                  </div>
+
+                  <div class="form-group" style="text-align:center;">
+                    <button type="button" class="btn btn-sm btn-primary second-Filt">二次筛选</button>
                   </div>
 
                   
@@ -371,10 +375,11 @@
                   <div class="flip-btn">
                     <button type="button" class="flip-more btn btn-sm btn-primary">查看更多</button>
                     <span href="" class="page-now" style="display:none"></span>
+                    <span href="" class="totalnum" style="display:none">100</span>
                   </div>
 
                   <div class="save">
-                    <button type="button" class="btn btn-sm btn-success">保存算法</button>
+                    <button type="button" class="btn btn-sm btn-success btn-save">保存算法</button>
                   </div>
                 </form>
               </div>
@@ -388,31 +393,53 @@
   <script>
     var preview = (function(){
 
+      var QUERY_URL = 'http://10.125.203.32:8080/tboverseas/item/queryList.htm',
+          ADD_URL = 'http://10.125.203.32:8080/tboverseas/item/add.htm',
+          CONFIG_URL = 'http://10.125.203.32:8080/tboverseas/config/add.htm';
+
+
       var application = {
         init : function(){
-          this.LoadItemList(1);
+          this.LoadItemList('get',QUERY_URL,1,0,0);
           this.BindClick();
         },
-        LoadItemList : function(page){
+        LoadItemList : function(type,url,page,price,level){
 
           var parameter = this.ReadLocalData()[0];
 
-          parameter['pageNum'] = page;
+          if(page){
+            parameter['pageNum'] = page;
+          }
+          
+          if(price){
+            parameter['itemPrice'] = price;
+          }
+          if(level){
+            parameter['sellerLevel'] = level;
+          }
+          
+          parameter['moduleId'] = 12345;
+          parameter['totalNum'] = $('.totalnum').html();
+          parameter['pageSize'] = 16;
+          parameter['submitflag'] = 1;
 
           $.ajax({
-            type : "get",
-            url : 'http://10.125.203.32:8080/tboverseas/item/queryList.htm',
+            type : type,
+            url : url,
             data : parameter,
             dataType : "jsonp",
             success: function(data){
               var dataList = data.itemInfoList.dataList;
               var pagenow = data.itemInfoList.currentPageNum;
+              var total = data.itemInfoList.total;
 
               $.each(dataList,function(key,value){
 
                 value.mainPic = value.mainPic+'_240x240.jpg';
 
-                var itemcon = '<li><a href="" data-id="'+ value.itemId +'" data-seller="'+ value.sellerId +'"><img src="'+ value.mainPic +'" alt=""><span>'+ value.title +'</span></a><span class="mask"></span></li>';
+                var deleted = value.status == 0 ? '' : 'deleted';
+
+                var itemcon = '<li data-id="'+ value.itemId +'" data-seller="'+ value.sellerId +'" class="'+ deleted +'"><a href=""><img src="'+ value.mainPic +'" alt=""><span>'+ value.title +'</span></a><span class="mask"></span></li>';
 
 
               $('.pre-item').append(itemcon);
@@ -421,6 +448,10 @@
 
               //当前页码
               $('.page-now').html(pagenow);
+
+              //当前数据最大值
+              $('.totalnum').html(total);
+              
             }
           })
         },
@@ -436,24 +467,91 @@
 
             var parent = $(this).parent('li')[0];
 
-            $(parent).toggleClass('deleted');
+            if($(parent).hasClass('deleted')) return;
+
+            var sellerId = $(parent).attr('data-seller');
+            var itemId = $(parent).attr('data-id');
+
+            //打点统计
+            var src= ADD_URL+'?userId='+ sellerId +'&itemId='+ itemId +'&reason='+$.now();
+          
+            RequestOnce(src);
+
+            $(parent).addClass('deleted');
 
           });
 
           $( "body" ).delegate( ".flip-more", "click", function( event ) {
             
-            
-
             var page = parseInt($('.page-now').html())+1;
+
+            var second = CheckSecondFilt();
             
-            self.LoadItemList(page);
+            self.LoadItemList('GET',QUERY_URL,page,second.price,second.checked);
+
             event.preventDefault();
-
-
-            
-
-            
           });
+
+          $('body').delegate('.second-Filt','click',function(event){
+            
+            var second = CheckSecondFilt();
+
+            //empty
+            $('.pre-item').empty();
+
+            self.LoadItemList('GET',QUERY_URL,1,second.price,second.checked);
+
+          });
+
+          $('body').delegate('.btn-save','click',function(event){
+
+            var second = CheckSecondFilt();
+
+            self.LoadItemList('POST',CONFIG_URL,0,second.price,second.checked);
+          });
+
+          function CheckSecondFilt(){
+
+            var pricemin = $('#pricemin').val() || '*';
+            var pricemax = $('#pricemax').val() || '*';
+
+            var price = pricemin + '-' + pricemax;
+            
+            var checkbox = $('.checkbox-inline input');
+
+            var checked = [];
+
+            $(checkbox).each(function(){
+              
+              if($(this)[0].checked){
+                checked.push($(this)[0].value);
+              }
+              
+            });
+
+            checked = checked.join(',');
+
+
+            var query = {
+              price: price,
+              checked : checked
+            }
+
+            return query;
+
+          }
+
+          function RequestOnce(src){
+
+            //打点统计
+            var img = new Image();
+            var rnd_id = "_img_" + Math.random();
+            window[rnd_id] = img; // 全局变量引用
+            img.onload = img.onerror = function () {
+                window[rnd_id] = null; // 删除全局变量引用
+            }
+            img.src = src;
+          }
 
         }
       }
