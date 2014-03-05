@@ -508,6 +508,13 @@
             var second = CheckSecondFilt();
 
             self.LoadItemList('POST',CONFIG_URL,0,second.price,second.checked);
+
+            alert('算法已保存,预览页面将自动关闭。');
+
+            window.close();
+
+
+
           });
 
           function CheckSecondFilt(){
