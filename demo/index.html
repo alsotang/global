@@ -273,42 +273,42 @@
                     </div>              
                   </div>
 
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="disabledSelect" class="col-sm-2 control-label">图片高度</label>
                     <div class="col-sm-10">
                       <select id="" class="form-control">
                         <option>Disabled select</option>
                       </select>
                     </div>
-                  </div>
+                  </div> -->
 
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="disabledSelect" class="col-sm-2 control-label">图片宽度</label>
                     <div class="col-sm-10">
                       <select id="" class="form-control">
                         <option>Disabled select</option>
                       </select>
                     </div>
-                  </div>
+                  </div> -->
 
 
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="disabledSelect" class="col-sm-2 control-label">卖家标签提取</label>
                     <div class="col-sm-10">
                       <select id="" class="form-control">
                         <option>Disabled select</option>
                       </select>
                     </div>
-                  </div>
+                  </div> -->
 
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="disabledSelect" class="col-sm-2 control-label">商品标签提取</label>
                     <div class="col-sm-10">
                       <select id="" class="form-control">
                         <option>Disabled select</option>
                       </select>
                     </div>
-                  </div>
+                  </div> -->
 
                   <div class="divider"></div>
 
@@ -358,7 +358,7 @@
                   <div class="form-group">
                     <div class="alg-box">
                       <div class="alg-box-hd">
-                        <label for="">分桶1</label> <input type="checkbox" class="selectedsubbarrels"/> 
+                        <label for="">分桶1</label> <input type="checkbox" class="selectedsubbarrels" value="subBarrels_1"/> 
                       </div>
                       <div class="alg-box-bd">
                         <p>
@@ -379,7 +379,7 @@
                     </div>
                     <div class="alg-box">
                       <div class="alg-box-hd">
-                        <label for="">分桶2</label> <input type="checkbox" class="selectedsubbarrels"/> 
+                        <label for="">分桶2</label> <input type="checkbox" class="selectedsubbarrels" value="subBarrels_2"/> 
                       </div>
                       <div class="alg-box-bd">
                         <p>
@@ -400,7 +400,7 @@
                     </div>
                     <div class="alg-box">
                       <div class="alg-box-hd">
-                        <label for="">分桶3</label> <input type="checkbox" class="selectedsubbarrels" /> 
+                        <label for="">分桶3</label> <input type="checkbox" class="selectedsubbarrels" value="subBarrels_3" /> 
                       </div>
                       <div class="alg-box-bd">
                         <p>
@@ -422,7 +422,7 @@
                     </div>
                     <div class="alg-box">
                       <div class="alg-box-hd">
-                        <label for="">分桶4</label> <input type="checkbox" class="selectedsubbarrels" /> 
+                        <label for="">分桶4</label> <input type="checkbox" class="selectedsubbarrels" value="subBarrels_4"/> 
                       </div>
                       <div class="alg-box-bd">
                         <p>
@@ -577,20 +577,23 @@
 
                                 });
 
-                                
-
-
-                                  
                               }
                             });
                           },
 
                           bind : function(){
 
-                            
-
-
                             $('body').on('click','button',function(){
+
+
+                              var parent = $(this).parent();
+
+                              var subBarrels = parent.find('.selectedsubbarrels').val(),
+                                  filterStyle = parent.find('.alg-type').val(),
+                                  arithmetic = parent.find('.dropLang').val(),
+                                  orderStr = parent.find('.dropFrame').val();
+
+
                               
                               var causeway = {  id: $.now() ,
                                               picscore: $('.picscore').val(), 
@@ -604,11 +607,12 @@
                                               categorylevel2 : $('.categorylevel2').val(),
                                               categoryleaf : $('.categoryleaf').val(),
                                               keyword : $('.keyword').val(),
-                                              isexemptionpostage : $('.isexemptionpostage')[0].checked
+                                              isexemptionpostage : $('.isexemptionpostage')[0].checked,
+                                              subBarrels : subBarrels,
+                                              filterStyle : filterStyle,
+                                              arithmetic : arithmetic,
+                                              orderStr : orderStr
                                               };
-
-
-                              
 
                               localStorage.removeItem("causeway");
 

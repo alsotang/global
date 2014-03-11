@@ -155,7 +155,7 @@
         margin-bottom: 10px;
         margin-right: 10px;
         width: 240px;
-        height: 280px;
+        height: 300px;
         overflow: hidden;
         text-align: center;
         position: relative;
@@ -166,7 +166,7 @@
       }
       .pre-item li a{
         width: 240px;
-        height: 280px;
+        height: 300px;
         display: block;
       }
       .pre-item li a:hover{
@@ -188,6 +188,9 @@
         width: 240px;
         height: 280px;
         background:url(http://gtms02.alicdn.com/tps/i2/T1co9SFupcXXb5Mas3-128-128.png) no-repeat 60px center;
+      }
+      .pre-item li .price{
+        color: #f60;
       }
       .pre-item li.deleted .mask,.pre-item li:hover .mask{
         display: block;
@@ -393,9 +396,9 @@
   <script>
     var preview = (function(){
 
-      var QUERY_URL = 'http://10.125.203.32:8080/tboverseas/item/queryList.htm',
-          ADD_URL = 'http://10.125.203.32:8080/tboverseas/item/add.htm',
-          CONFIG_URL = 'http://10.125.203.32:8080/tboverseas/config/add.htm';
+      var QUERY_URL = 'http://10.125.203.32:8080/tboverseas/item/queryList.htm', //查询
+          ADD_URL = 'http://10.125.203.32:8080/tboverseas/item/add.htm', //黑名单
+          CONFIG_URL = 'http://10.125.203.32:8080/tboverseas/config/add.htm'; //配置保存
 
 
       var application = {
@@ -418,6 +421,8 @@
             parameter['sellerLevel'] = level;
           }
           
+          
+
           parameter['moduleId'] = 12345;
           parameter['totalNum'] = $('.totalnum').html();
           parameter['pageSize'] = 16;
@@ -433,13 +438,15 @@
               var pagenow = data.itemInfoList.currentPageNum;
               var total = data.itemInfoList.total;
 
+              console.log(dataList);
+
               $.each(dataList,function(key,value){
 
                 value.mainPic = value.mainPic+'_240x240.jpg';
 
                 var deleted = value.status == 0 ? '' : 'deleted';
 
-                var itemcon = '<li data-id="'+ value.itemId +'" data-seller="'+ value.sellerId +'" class="'+ deleted +'"><a href=""><img src="'+ value.mainPic +'" alt=""><span>'+ value.title +'</span></a><span class="mask"></span></li>';
+                var itemcon = '<li data-id="'+ value.itemId +'" data-seller="'+ value.sellerId +'" class="'+ deleted +'"><a href=""><img src="'+ value.mainPic +'" alt=""><span>'+ value.title +'</span><span class="price"> 价格 &yen; '+ value.price +'</span></a><span class="mask"></span></li>';
 
 
               $('.pre-item').append(itemcon);
@@ -496,6 +503,8 @@
             
             var second = CheckSecondFilt();
 
+            
+            
             //empty
             $('.pre-item').empty();
 
