@@ -487,9 +487,16 @@
                           },
 
                           initPage: function() {
+                            var self = this;
+
+                            //获取URL的参数
+                            var moduleId = self.getUrlParam('moduleId');
+
+
+
                             $.ajax({
                               type : "get",
-                              url : "http://10.125.203.32:8080/tboverseas/item/queryList.htm?moduleId=12345",
+                              url : "http://10.125.203.32:8080/tboverseas/item/queryList.htm?moduleId="+moduleId,
                               dataType : "jsonp",
                               success: function(data){
 
@@ -584,7 +591,7 @@
                                   //记录用户上次的选择
                                   self.find('.alg-type').val(subBarrels.filterStyle);
                                   self.find('.dropLang').val(subBarrels.arithmetic);
-                                  
+
                                   self.find('.dropFrame').val(subBarrels.orderStr);
 
                                 });
@@ -606,9 +613,6 @@
                                   orderStr = parent.find('.dropFrame').val(),
                                   priceRange = $(this).attr('data-price'),
                                   sellerLevel = $(this).attr('data-sellerlevel');
-
-
-
 
                               //isWhiteGround 是否白底图片 0/1
                               //regularTradeFlg 是否正常交易 1/0
@@ -645,7 +649,14 @@
                               window.open('./preview.html');
 
                             });
+                          },
+
+                          getUrlParam :function(name){
+                            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+                            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+                            if (r != null) return unescape(r[2]); return null; //返回参数值
                           }
+
                         }
 
                       return application;
