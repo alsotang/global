@@ -512,16 +512,18 @@
 
                                 $('.picscore').val(picScore);
                                 $('.areabuyerreg').val(areaBuyerReg);
-                                $('.areabuyerLgreceive').val(areaBuyerLgReceive);
+                                $('.areabuyerlgreceive').val(areaBuyerLgReceive);
                                 $('.areaorderoccur').val(areaOrderOccur);
                                 $('.sellerid').val(sellerId);
-                                $('.iswhiteground').checked=isWhiteGround;
-                                $('.regulartradeflg').checked=regularTradeFlg;
+                                $('.iswhiteground')[0].checked=isWhiteGround ? false : true;
+                                $('.regulartradeflg')[0].checked=regularTradeFlg ? true : false;
                                 $('.categorylevel1').val(categoryLevel1);
                                 $('.categorylevel2').val(categoryLevel2);
                                 $('.categoryleaf').val(categoryLeaf);
                                 $('.keyword').val(keyword);
-                                $('.isexemptionpostage').checked=isExemptionPostage;
+                                $('.isexemptionpostage')[0].checked=isExemptionPostage ? false : true;
+
+                              
 
   
 
@@ -600,7 +602,7 @@
                                var causeway = {  id: $.now() ,
                                               picScore: $('.picscore').val(), 
                                               areaBuyerReg: $('.areabuyerreg').val(),
-                                              areaBuyerLgReceive :$('.areabuyerLgreceive').val() ,
+                                              areaBuyerLgReceive :$('.areabuyerlgreceive').val() ,
                                               areaOrderOccur :$('.areaorderoccur').val(), 
                                               sellerId :$('.sellerid').val(),
                                               isWhiteGround : $('.iswhiteground')[0].checked ? 0 : 1,
