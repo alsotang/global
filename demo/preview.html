@@ -415,7 +415,7 @@
           }
           
           if(price){
-            parameter['itemPrice'] = price;
+            parameter['priceRange'] = price;
           }
           if(level){
             parameter['sellerLevel'] = level;
@@ -428,6 +428,8 @@
           parameter['pageSize'] = 16;
           parameter['submitflag'] = 1;
 
+          console.log(parameter);
+
           $.ajax({
             type : type,
             url : url,
@@ -438,7 +440,7 @@
               var pagenow = data.itemInfoList.currentPageNum;
               var total = data.itemInfoList.total;
 
-              console.log(dataList);
+              
 
               $.each(dataList,function(key,value){
 
