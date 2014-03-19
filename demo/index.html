@@ -581,6 +581,12 @@
                                     self.find('.dropFrame').append('<option value="'+value+'" parentid="'+ parentId +'">'+value+'</option>');
                                   });
 
+                                  //记录用户上次的选择
+                                  self.find('.alg-type').val(subBarrels.filterStyle);
+                                  self.find('.dropLang').val(subBarrels.arithmetic);
+                                  debugger;
+                                  self.find('.dropFrame').val(subBarrels.orderStr);
+
                                 });
 
                               }
