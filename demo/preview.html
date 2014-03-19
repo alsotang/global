@@ -421,12 +421,37 @@
             parameter['sellerLevel'] = level;
           }
           
-          
+          console.log(parameter);
 
           parameter['moduleId'] = 12345;
           parameter['totalNum'] = $('.totalnum').html();
           parameter['pageSize'] = 16;
           parameter['submitflag'] = 1;
+
+          //回写二次筛选条件
+          if(parameter['priceRange']){
+            var pricemin = parameter['priceRange'].split('-')[0];
+            var pricemax = parameter['priceRange'].split('-')[1];
+            $('#pricemin').val(pricemin);
+            $('#pricemax').val(pricemax);
+          }
+          if(parameter['sellerLevel']){
+            var seller = parameter['sellerLevel'].split(',');
+
+            var checkbox = $('.checkbox-inline input');
+
+            $(checkbox).each(function(){
+              
+              if($.inArray($(this)[0].value,seller) != -1){
+                $(this)[0].checked = true;
+              }
+              
+            });
+
+          }
+
+
+
 
 
           $.ajax({

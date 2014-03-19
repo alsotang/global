@@ -548,6 +548,10 @@
                                   //debugger;
                                   self.find('.selectedsubbarrels')[0].checked = selectedSubBarrels;
 
+                                  //二次筛选的条件
+                                  self.find('button').attr('data-price',subBarrels.priceRange);
+                                  self.find('button').attr('data-sellerlevel',subBarrels.sellerLevel);
+
 
                                   //算法类别
                                   var arithmeticTypes = subBarrels.arithmeticTypes;
@@ -593,7 +597,11 @@
                               var subBarrels = parent.find('.selectedsubbarrels').val(),
                                   filterStyle = parent.find('.alg-type').val(),
                                   arithmetic = parent.find('.dropLang').val(),
-                                  orderStr = parent.find('.dropFrame').val();
+                                  orderStr = parent.find('.dropFrame').val(),
+                                  priceRange = $(this).attr('data-price'),
+                                  sellerLevel = $(this).attr('data-sellerlevel');
+
+
 
 
                               //isWhiteGround 是否白底图片 0/1
@@ -615,7 +623,9 @@
                                               subBarrels : subBarrels,
                                               filterStyle : filterStyle,
                                               arithmetic : arithmetic,
-                                              orderStr : orderStr
+                                              orderStr : orderStr,
+                                              priceRange : priceRange,
+                                              sellerLevel : sellerLevel
                                               };
 
                               localStorage.removeItem("causeway");
